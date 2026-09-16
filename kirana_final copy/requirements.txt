@@ -1,0 +1,11 @@
+openai-agents
+python-telegram-bot
+python-dotenv
+reportlab
+python-pptx
+matplotlib
+fastapi
+uvicorn
+requests
+pytest
+pytest-asyncio

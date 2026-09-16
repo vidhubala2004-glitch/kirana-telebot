@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirana AI Store Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marked/lib/marked.min.css" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="light-pastel">
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <div class="brand-mark"><i class="fa-solid fa-store"></i></div>
+                <div>
+                    <p class="eyebrow">Smart Grocery</p>
+                    <h2>Kirana AI</h2>
+                </div>
+            </div>
+
+            <div class="store-summary">
+                <h3>Live Store Snapshot</h3>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="icon-wrapper bg-rose">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <div class="card-details">
+                            <span class="label">Today's Revenue</span>
+                            <span class="value" id="summary-revenue">₹0.00</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="icon-wrapper bg-peach">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+                        <div class="card-details">
+                            <span class="label">Bills</span>
+                            <span class="value" id="summary-bills">0</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="icon-wrapper bg-lilac">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <div class="card-details">
+                            <span class="label">Low Stock</span>
+                            <span class="value" id="summary-low-stock">0</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="icon-wrapper bg-mint">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="card-details">
+                            <span class="label">Khata Due</span>
+                            <span class="value" id="summary-khata">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-panel">
+                <h3>Market Check</h3>
+                <div class="market-input-wrap">
+                    <input id="market-input" type="text" placeholder="Search product price" />
+                    <button id="market-btn" class="market-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div id="market-price-card" class="market-price-card">
+                    <div class="mini-label">Live product insight</div>
+                    <p>Check current MRP vs your store price.</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <button class="action-btn" data-query="Generate weekly sales report">
+                    <i class="fa-solid fa-chart-line"></i> Sales Report
+                </button>
+                <button class="action-btn" data-query="Show low stock items">
+                    <i class="fa-solid fa-boxes-stacked"></i> Low Stock
+                </button>
+                <button class="action-btn" data-query="What is the current market price of atta?">
+                    <i class="fa-solid fa-magnifying-glass-dollar"></i> Check Market Price
+                </button>
+                <button class="action-btn" data-query="Create a new bill">
+                    <i class="fa-solid fa-file-invoice"></i> New Bill
+                </button>
+            </div>
+        </aside>
+
+        <main class="chat-container glass-panel">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h2>Store Assistant</h2>
+                    <span class="status"><i class="fa-solid fa-circle"></i> Online</span>
+                </div>
+                <div class="header-actions">
+                    <button id="reset-btn" class="icon-btn" title="Reset Session">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="chat-box" id="chat-box">
+                <div class="message assistant-msg">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="msg-content">
+                        <p>Hello! Namaste! I’m your Kirana AI assistant. I combine your store database with live market checks to give smarter answers on stock, pricing, bills, and sales. How may I help today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <form id="chat-form">
+                    <button type="button" class="icon-btn voice-btn" title="Voice Input (Coming Soon)">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <input type="text" id="chat-input" placeholder="Ask about stock, pricing, or billing..." autocomplete="off">
+                    <button type="submit" class="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
