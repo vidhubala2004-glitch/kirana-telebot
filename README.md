@@ -1,4 +1,4 @@
-# kirana-telebot
+ kirana-telebot
 Kirana AI Store Assistant is an AI-powered supermarket management system that enables shopkeepers to manage kirana store operations through a Telegram-based conversational interface. Built with Python, OpenAI Agents SDK, SQLite, and FastAPI, the system supports product search, inventory management, multi-item billing, GST calculation
 # 🛒 Kirana AI Store Assistant
 
@@ -385,6 +385,15 @@ The system demonstrates how **conversational AI + agent tools + databases + busi
 * 🔔 Automated low-stock notifications
 * ☁️ Cloud database integration
 * 🔐 Role-based access for multiple employees
+  SCREEN SHOT:
+<img width="1440" height="900" alt="Screenshot 2026-09-15 at 9 33 12 AM" src="https://github.com/user-attachments/assets/71ef3620-340e-493b-b0c0-50ae1a10a322" />
 
----
+<img width="1440" height="900" alt="Screenshot 2026-09-15 at 9 33 21 AM" src="https://github.com/user-attachments/assets/1add8755-6a84-47f2-bfc0-97ae5ba30766" />
+<img width="1440" height="900" alt="Screenshot 2026-09-15 at 9 33 03 AM" src="https://github.com/user-attachments/assets/a24806c0-48ac-4013-ae9b-0d12c9f2b066" />
+
+<img width="1440" height="900" alt="Screenshot 2026-09-15 at 9 32 51 AM" src="https://github.com/user-attachments/assets/679ba410-1d40-47c2-a0aa-fee384a09bec" />
+
+
+
+
 LINK :https://t.me/Kirana007_bot
